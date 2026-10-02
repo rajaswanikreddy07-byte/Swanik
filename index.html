@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Swanik | YouTuber & Games</title>
+<title>Swanik | YouTuber</title>
 
 <style>
 * {
@@ -14,11 +14,19 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #111;
     color: white;
     text-align: center;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     background: linear-gradient(135deg, #ff0000, #800000);
@@ -33,6 +41,10 @@ header h1 {
 header p {
     font-size: 22px;
 }
+
+/* =========================
+   PROFILE
+========================= */
 
 .profile {
     padding: 50px 20px;
@@ -59,7 +71,9 @@ header p {
     color: #ccc;
 }
 
-/* BUTTONS */
+/* =========================
+   MAIN BUTTONS
+========================= */
 
 .buttons {
     margin-top: 30px;
@@ -83,7 +97,9 @@ header p {
     transform: scale(1.05);
 }
 
-/* CONTENT */
+/* =========================
+   VIDEOS
+========================= */
 
 .videos {
     padding: 50px 20px;
@@ -124,7 +140,9 @@ header p {
     line-height: 1.5;
 }
 
-/* GAMES */
+/* =========================
+   GAMES
+========================= */
 
 .games {
     padding: 60px 20px;
@@ -157,8 +175,8 @@ header p {
 
 .game-card p {
     color: #bbb;
-    margin-bottom: 20px;
     line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .play-button {
@@ -177,7 +195,9 @@ header p {
     color: #ff0000;
 }
 
-/* GAME AREA */
+/* =========================
+   GAME AREA
+========================= */
 
 #gameArea {
     display: none;
@@ -188,7 +208,7 @@ header p {
 
 #gameArea h2 {
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #gameMessage {
@@ -196,33 +216,41 @@ header p {
     margin-bottom: 15px;
 }
 
-/* TETRIS */
+/* =========================
+   TETRIS
+========================= */
+
+#tetrisGame {
+    display: none;
+}
+
+#tetrisScore {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
 
 #tetrisBoard {
-    width: 240px;
-    height: 480px;
+    width: 250px;
+    height: 500px;
     background: #050505;
     border: 4px solid #ff0000;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(20, 1fr);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
 .tetris-cell {
-    border: 1px solid #181818;
+    border: 1px solid #202020;
+    background: #090909;
 }
 
 .tetris-filled {
-    background: #ff0000;
-}
-
-/* ZOMBIE GAME */
-
-#zombieCanvas {
-    background: #151515;
-    border: 4px solid #ff0000;
-    max-width: 100%;
+    background: #ff0000 !important;
+    border: 2px solid white !important;
+    box-shadow: inset 0 0 5px white, 0 0 7px #ff0000;
 }
 
 .controls {
@@ -233,7 +261,7 @@ header p {
     background: #ff0000;
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 11px 18px;
     margin: 4px;
     border-radius: 8px;
     cursor: pointer;
@@ -243,6 +271,37 @@ header p {
 .controls button:hover {
     background: white;
     color: #ff0000;
+}
+
+/* =========================
+   ZOMBIE SURVIVAL
+========================= */
+
+#zombieGame {
+    display: none;
+}
+
+#zombieInfo {
+    margin: 10px;
+    font-size: 18px;
+}
+
+#zombieCanvas {
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+    background: #4d9b3a;
+    border: 4px solid #ff0000;
+    display: block;
+    margin: 20px auto;
+    cursor: crosshair;
+}
+
+#zombieHelp {
+    color: #bbb;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 10px auto;
 }
 
 .backButton {
@@ -255,7 +314,13 @@ header p {
     cursor: pointer;
 }
 
-/* FOOTER */
+.backButton:hover {
+    background: #ff0000;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 25px;
@@ -266,15 +331,54 @@ footer {
 footer span {
     color: #ff0000;
 }
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 45px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    .profile h2 {
+        font-size: 30px;
+    }
+
+    #tetrisBoard {
+        width: 220px;
+        height: 440px;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
     <h1>SWANIK</h1>
-    <p>🎥 YouTuber | 🤖 ChatGPT Enthusiast | 🎮 Gamer | 🚀 Creator</p>
+
+    <p>
+        🎥 YouTuber |
+        🤖 ChatGPT Enthusiast |
+        🎮 Gamer |
+        🚀 Creator
+    </p>
+
 </header>
+
+
+<!-- =========================
+     PROFILE
+========================= -->
 
 <section class="profile">
 
@@ -283,8 +387,9 @@ footer span {
     <h2>Hi, I'm Swanik! 👋</h2>
 
     <p>
-        Welcome to my website! I am Swanik, a YouTuber and creator.
-        I love technology, coding, AI, gaming and making fun content.
+        Welcome to my website! I am Swanik, a YouTuber and content creator.
+        I love creating interesting videos, exploring technology,
+        coding, AI and games.
     </p>
 
     <div class="buttons">
@@ -307,6 +412,10 @@ footer span {
 </section>
 
 
+<!-- =========================
+     CONTENT
+========================= -->
+
 <section class="videos" id="videos">
 
     <h2>🎬 My Content</h2>
@@ -314,31 +423,48 @@ footer span {
     <div class="cards">
 
         <div class="card">
+
             <h3>🤖 ChatGPT</h3>
+
             <p>
-                Exploring AI, ChatGPT and cool things you can do
-                with technology.
+                Exploring AI, ChatGPT and cool things
+                you can do with technology.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>📹 Vlogging</h3>
+
             <p>
-                Sharing fun vlogs, adventures and exciting experiences.
+                Sharing fun vlogs, daily adventures,
+                exciting experiences and memorable moments.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>💻 Coding</h3>
+
             <p>
-                Creating awesome projects with HTML, CSS and JavaScript.
+                Learning and creating awesome projects
+                with HTML, CSS and JavaScript.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     GAME SELECTION
+========================= -->
 
 <section class="games" id="games">
 
@@ -353,12 +479,15 @@ footer span {
             <h3>Tetris</h3>
 
             <p>
-                Stack the blocks, clear the lines and try
-                to get the highest score!
+                Stack the blocks, clear lines and
+                try to get the highest score!
             </p>
 
-            <button class="play-button" onclick="startTetris()">
+            <button class="play-button"
+                    onclick="startTetris()">
+
                 ▶ Play Tetris
+
             </button>
 
         </div>
@@ -371,12 +500,15 @@ footer span {
             <h3>Zombie Survival</h3>
 
             <p>
-                Survive the zombie attack and defeat as many
-                zombies as you can!
+                Survive the zombies, build barriers
+                and protect yourself!
             </p>
 
-            <button class="play-button" onclick="startZombie()">
+            <button class="play-button"
+                    onclick="startZombie()">
+
                 ▶ Play Zombie Survival
+
             </button>
 
         </div>
@@ -386,7 +518,9 @@ footer span {
 </section>
 
 
-<!-- GAME AREA -->
+<!-- =========================
+     GAME AREA
+========================= -->
 
 <section id="gameArea">
 
@@ -394,9 +528,12 @@ footer span {
 
     <p id="gameMessage"></p>
 
-    <!-- TETRIS -->
 
-    <div id="tetrisGame" style="display:none;">
+    <!-- =====================
+         TETRIS
+    ====================== -->
+
+    <div id="tetrisGame">
 
         <div id="tetrisScore">
             Score: 0
@@ -418,37 +555,65 @@ footer span {
                 ▶
             </button>
 
-            <button onclick="dropTetris()">
-                ⬇
+            <button onclick="hardDropTetris()">
+                ⬇ DROP
             </button>
 
         </div>
 
+        <p style="color:#aaa;margin-top:10px;">
+            Keyboard: ← → move | ↑ rotate | ↓ drop
+        </p>
+
     </div>
 
 
-    <!-- ZOMBIE -->
+    <!-- =====================
+         ZOMBIE SURVIVAL
+    ====================== -->
 
-    <div id="zombieGame" style="display:none;">
+    <div id="zombieGame">
 
-        <p>
+        <div id="zombieInfo">
+
             ❤️ Health:
             <span id="health">100</span>
-            &nbsp;&nbsp;
+
+            &nbsp;&nbsp; | &nbsp;&nbsp;
+
             🧟 Zombies:
             <span id="zombieScore">0</span>
-        </p>
+
+            &nbsp;&nbsp; | &nbsp;&nbsp;
+
+            🧱 Barrier:
+            <span id="barrierCount">0</span>
+
+        </div>
+
 
         <canvas id="zombieCanvas"
-                width="600"
-                height="400">
+                width="900"
+                height="500">
         </canvas>
 
-        <div class="controls">
 
-            <button onclick="shootZombie()">
-                🔫 Shoot
-            </button>
+        <p id="zombieHelp">
+
+            <b>WASD / Arrow Keys</b> = Move |
+            <b>B</b> = Place/Upgrade Barrier |
+            <b>Other Keys</b> = Shoot
+
+            <br>
+
+            Zombies come from the right.
+            Stand in one place and press B repeatedly
+            to upgrade the barrier there.
+
+        </p>
+
+
+        <div class="controls">
 
             <button onclick="movePlayer('up')">
                 ⬆
@@ -466,66 +631,98 @@ footer span {
                 ➡
             </button>
 
+            <button onclick="buildBarrier()">
+                🧱 BARRIER
+            </button>
+
+            <button onclick="shoot()">
+                🔫 SHOOT
+            </button>
+
         </div>
 
     </div>
 
-    <br>
 
-    <button class="backButton" onclick="closeGame()">
+    <button class="backButton"
+            onclick="closeGame()">
+
         ✖ Close Game
+
     </button>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    <p>Made with ❤️ by <span>Swanik</span></p>
+    <p>
+        Made with ❤️ by
+        <span>Swanik</span>
+    </p>
 
-    <p>© 2026 Swanik. All rights reserved.</p>
+    <p>
+        © 2026 Swanik. All rights reserved.
+    </p>
 
 </footer>
 
 
 <script>
 
-/* =========================
-   GAME SYSTEM
-========================= */
+/* =====================================================
+   GENERAL GAME SYSTEM
+===================================================== */
 
-const gameArea = document.getElementById("gameArea");
-const gameTitle = document.getElementById("gameTitle");
-const gameMessage = document.getElementById("gameMessage");
+const gameArea =
+    document.getElementById("gameArea");
+
+const gameTitle =
+    document.getElementById("gameTitle");
+
+const gameMessage =
+    document.getElementById("gameMessage");
+
 
 function showGame() {
+
     gameArea.style.display = "block";
+
     gameArea.scrollIntoView({
         behavior: "smooth"
     });
 }
 
+
 function closeGame() {
+
     gameArea.style.display = "none";
+
+    stopTetris();
+
     stopZombie();
 }
 
 
-/* =========================
+/* =====================================================
    TETRIS
-========================= */
+===================================================== */
 
-const boardWidth = 10;
-const boardHeight = 20;
+const T_COLS = 10;
+const T_ROWS = 20;
 
-let tetrisBoard = [];
-let currentPiece;
-let pieceX;
-let pieceY;
-let tetrisScore = 0;
-let tetrisTimer;
+let tBoard = [];
+let tPiece = null;
+let tX = 0;
+let tY = 0;
+let tScore = 0;
+let tTimer = null;
 
-const pieces = [
+const tPieces = [
 
     [
         [1,1,1,1]
@@ -549,6 +746,16 @@ const pieces = [
     [
         [0,0,1],
         [1,1,1]
+    ],
+
+    [
+        [1,1,0],
+        [0,1,1]
+    ],
+
+    [
+        [0,1,1],
+        [1,1,0]
     ]
 
 ];
@@ -559,74 +766,121 @@ function startTetris() {
     showGame();
 
     gameTitle.innerText = "🧱 Tetris";
+
     gameMessage.innerText =
-        "Use the buttons to move and rotate your blocks.";
+        "Use the arrow keys or buttons to play!";
 
-    document.getElementById("tetrisGame").style.display = "block";
-    document.getElementById("zombieGame").style.display = "none";
+    document.getElementById("tetrisGame")
+        .style.display = "block";
 
-    tetrisScore = 0;
+    document.getElementById("zombieGame")
+        .style.display = "none";
 
-    clearInterval(tetrisTimer);
+    stopZombie();
+
+    tScore = 0;
+
+    document.getElementById("tetrisScore")
+        .innerText = "Score: 0";
 
     createTetrisBoard();
-    newPiece();
 
-    tetrisTimer = setInterval(dropTetris, 600);
-}
+    spawnTetrisPiece();
 
+    clearInterval(tTimer);
 
-function createTetrisBoard() {
-
-    tetrisBoard = [];
-
-    for (let y = 0; y < boardHeight; y++) {
-
-        tetrisBoard[y] = [];
-
-        for (let x = 0; x < boardWidth; x++) {
-            tetrisBoard[y][x] = 0;
-        }
-    }
+    tTimer =
+        setInterval(dropTetris, 600);
 
     drawTetris();
 }
 
 
-function newPiece() {
+function stopTetris() {
 
-    currentPiece =
-        pieces[Math.floor(Math.random() * pieces.length)];
+    clearInterval(tTimer);
 
-    currentPiece =
-        currentPiece.map(row => [...row]);
+    tTimer = null;
+}
 
-    pieceX = 3;
-    pieceY = 0;
 
-    if (collision()) {
-        createTetrisBoard();
-        tetrisScore = 0;
+function createTetrisBoard() {
+
+    tBoard = [];
+
+    for (let y = 0; y < T_ROWS; y++) {
+
+        tBoard[y] = [];
+
+        for (let x = 0; x < T_COLS; x++) {
+
+            tBoard[y][x] = 0;
+        }
     }
 }
 
 
-function collision() {
+function spawnTetrisPiece() {
 
-    for (let y = 0; y < currentPiece.length; y++) {
+    const random =
+        Math.floor(Math.random() * tPieces.length);
 
-        for (let x = 0; x < currentPiece[y].length; x++) {
+    tPiece =
+        tPieces[random].map(row => [...row]);
 
-            if (!currentPiece[y][x]) continue;
+    tX =
+        Math.floor(
+            (T_COLS - tPiece[0].length) / 2
+        );
 
-            let nx = pieceX + x;
-            let ny = pieceY + y;
+    tY = 0;
+
+    if (
+        tetrisCollision(
+            tX,
+            tY,
+            tPiece
+        )
+    ) {
+
+        stopTetris();
+
+        gameMessage.innerText =
+            "GAME OVER! Final score: " + tScore;
+    }
+}
+
+
+function tetrisCollision(x, y, piece) {
+
+    for (
+        let py = 0;
+        py < piece.length;
+        py++
+    ) {
+
+        for (
+            let px = 0;
+            px < piece[py].length;
+            px++
+        ) {
+
+            if (!piece[py][px]) continue;
+
+            const bx = x + px;
+            const by = y + py;
 
             if (
-                nx < 0 ||
-                nx >= boardWidth ||
-                ny >= boardHeight ||
-                (ny >= 0 && tetrisBoard[ny][nx])
+                bx < 0 ||
+                bx >= T_COLS ||
+                by >= T_ROWS
+            ) {
+                return true;
+            }
+
+            if (
+                by >= 0 &&
+                tBoard[by][bx]
             ) {
                 return true;
             }
@@ -637,60 +891,105 @@ function collision() {
 }
 
 
-function mergePiece() {
+function mergeTetrisPiece() {
 
-    for (let y = 0; y < currentPiece.length; y++) {
+    for (
+        let py = 0;
+        py < tPiece.length;
+        py++
+    ) {
 
-        for (let x = 0; x < currentPiece[y].length; x++) {
+        for (
+            let px = 0;
+            px < tPiece[py].length;
+            px++
+        ) {
 
-            if (currentPiece[y][x]) {
+            if (!tPiece[py][px]) continue;
 
-                let ny = pieceY + y;
-                let nx = pieceX + x;
+            const bx = tX + px;
+            const by = tY + py;
 
-                if (ny >= 0) {
-                    tetrisBoard[ny][nx] = 1;
-                }
+            if (
+                by >= 0 &&
+                by < T_ROWS &&
+                bx >= 0 &&
+                bx < T_COLS
+            ) {
+
+                tBoard[by][bx] = 1;
             }
         }
     }
 }
 
 
-function clearLines() {
+function clearTetrisLines() {
 
-    for (let y = boardHeight - 1; y >= 0; y--) {
+    let lines = 0;
 
-        if (tetrisBoard[y].every(cell => cell === 1)) {
+    for (
+        let y = T_ROWS - 1;
+        y >= 0;
+        y--
+    ) {
 
-            tetrisBoard.splice(y, 1);
+        if (
+            tBoard[y].every(
+                cell => cell === 1
+            )
+        ) {
 
-            tetrisBoard.unshift(
-                new Array(boardWidth).fill(0)
+            tBoard.splice(y, 1);
+
+            tBoard.unshift(
+                new Array(T_COLS).fill(0)
             );
 
-            tetrisScore += 100;
+            lines++;
 
             y++;
         }
     }
 
-    document.getElementById("tetrisScore").innerText =
-        "Score: " + tetrisScore;
+    if (lines > 0) {
+
+        tScore += lines * 100;
+
+        document.getElementById(
+            "tetrisScore"
+        ).innerText =
+            "Score: " + tScore;
+    }
 }
 
 
 function dropTetris() {
 
-    pieceY++;
+    if (
+        !tPiece ||
+        !tTimer
+    ) {
+        return;
+    }
 
-    if (collision()) {
+    if (
+        !tetrisCollision(
+            tX,
+            tY + 1,
+            tPiece
+        )
+    ) {
 
-        pieceY--;
+        tY++;
 
-        mergePiece();
-        clearLines();
-        newPiece();
+    } else {
+
+        mergeTetrisPiece();
+
+        clearTetrisLines();
+
+        spawnTetrisPiece();
     }
 
     drawTetris();
@@ -699,10 +998,17 @@ function dropTetris() {
 
 function moveTetris(direction) {
 
-    pieceX += direction;
+    if (!tPiece) return;
 
-    if (collision()) {
-        pieceX -= direction;
+    if (
+        !tetrisCollision(
+            tX + direction,
+            tY,
+            tPiece
+        )
+    ) {
+
+        tX += direction;
     }
 
     drawTetris();
@@ -711,386 +1017,213 @@ function moveTetris(direction) {
 
 function rotateTetris() {
 
-    const oldPiece = currentPiece;
+    if (!tPiece) return;
 
-    currentPiece =
-        currentPiece[0].map((_, index) =>
-            currentPiece.map(row => row[index]).reverse()
+    const rotated =
+        tPiece[0].map(
+            (_, i) =>
+                tPiece
+                    .map(row => row[i])
+                    .reverse()
         );
 
-    if (collision()) {
-        currentPiece = oldPiece;
+    if (
+        !tetrisCollision(
+            tX,
+            tY,
+            rotated
+        )
+    ) {
+
+        tPiece = rotated;
     }
 
     drawTetris();
 }
 
 
+function hardDropTetris() {
+
+    if (!tPiece) return;
+
+    while (
+        !tetrisCollision(
+            tX,
+            tY + 1,
+            tPiece
+        )
+    ) {
+
+        tY++;
+    }
+
+    dropTetris();
+}
+
+
 function drawTetris() {
 
-    const board = document.getElementById("tetrisBoard");
+    const board =
+        document.getElementById(
+            "tetrisBoard"
+        );
 
     board.innerHTML = "";
 
-    for (let y = 0; y < boardHeight; y++) {
+    for (
+        let y = 0;
+        y < T_ROWS;
+        y++
+    ) {
 
-        for (let x = 0; x < boardWidth; x++) {
+        for (
+            let x = 0;
+            x < T_COLS;
+            x++
+        ) {
 
-            const cell = document.createElement("div");
+            const cell =
+                document.createElement("div");
 
-            cell.className = "tetris-cell";
+            cell.className =
+                "tetris-cell";
 
-            if (tetrisBoard[y][x]) {
-                cell.classList.add("tetris-filled");
+            if (tBoard[y][x]) {
+
+                cell.classList.add(
+                    "tetris-filled"
+                );
             }
 
             board.appendChild(cell);
         }
     }
 
-    for (let y = 0; y < currentPiece.length; y++) {
+    if (!tPiece) return;
 
-        for (let x = 0; x < currentPiece[y].length; x++) {
+    for (
+        let py = 0;
+        py < tPiece.length;
+        py++
+    ) {
 
-            if (currentPiece[y][x]) {
+        for (
+            let px = 0;
+            px < tPiece[py].length;
+            px++
+        ) {
 
-                let nx = pieceX + x;
-                let ny = pieceY + y;
+            if (!tPiece[py][px]) continue;
 
-                if (
-                    nx >= 0 &&
-                    nx < boardWidth &&
-                    ny >= 0 &&
-                    ny < boardHeight
-                ) {
+            const x = tX + px;
+            const y = tY + py;
 
-                    const index =
-                        ny * boardWidth + nx;
+            if (
+                x >= 0 &&
+                x < T_COLS &&
+                y >= 0 &&
+                y < T_ROWS
+            ) {
 
-                    board.children[index]
-                        .classList.add("tetris-filled");
-                }
+                const index =
+                    y * T_COLS + x;
+
+                board.children[index]
+                    .classList.add(
+                        "tetris-filled"
+                    );
             }
         }
     }
 }
 
 
-/* =========================
+/* =====================================================
    ZOMBIE SURVIVAL
-========================= */
+===================================================== */
 
-const canvas =
-    document.getElementById("zombieCanvas");
+const zCanvas =
+    document.getElementById(
+        "zombieCanvas"
+    );
 
-const ctx = canvas.getContext("2d");
+const zCtx =
+    zCanvas.getContext("2d");
 
-let player;
+let zombieRunning = false;
+let zombieLoop = null;
+
+let player = null;
+
 let zombies = [];
 let bullets = [];
+let barriers = [];
+
 let zombieScore = 0;
 let health = 100;
-let zombieLoop;
-let zombieRunning = false;
 
+let lastBarrierPosition = null;
+
+
+/* -------------------------
+   START ZOMBIE GAME
+------------------------- */
 
 function startZombie() {
 
     showGame();
 
-    gameTitle.innerText = "🧟 Zombie Survival";
+    gameTitle.innerText =
+        "🧟 Zombie Survival";
 
     gameMessage.innerText =
-        "Move around, shoot zombies and survive!";
+        "Survive the zombies and build your defenses!";
 
-    document.getElementById("tetrisGame").style.display = "none";
-    document.getElementById("zombieGame").style.display = "block";
+    document.getElementById("tetrisGame")
+        .style.display = "none";
+
+    document.getElementById("zombieGame")
+        .style.display = "block";
+
+    stopTetris();
 
     player = {
-        x: 300,
-        y: 200,
-        size: 18,
-        speed: 15
+
+        x: 130,
+        y: 250,
+
+        speed: 5
     };
 
     zombies = [];
     bullets = [];
+    barriers = [];
 
     zombieScore = 0;
     health = 100;
 
-    document.getElementById("health").innerText = health;
-    document.getElementById("zombieScore").innerText = zombieScore;
+    lastBarrierPosition = null;
+
+    updateZombieInfo();
 
     clearInterval(zombieLoop);
 
     zombieRunning = true;
 
-    zombieLoop = setInterval(updateZombieGame, 40);
-
-    for (let i = 0; i < 4; i++) {
-        createZombie();
-    }
-
-    drawZombieGame();
-}
-
-
-function createZombie() {
-
-    let side =
-        Math.floor(Math.random() * 4);
-
-    let x;
-    let y;
-
-    if (side === 0) {
-        x = Math.random() * canvas.width;
-        y = 0;
-    }
-
-    if (side === 1) {
-        x = canvas.width;
-        y = Math.random() * canvas.height;
-    }
-
-    if (side === 2) {
-        x = Math.random() * canvas.width;
-        y = canvas.height;
-    }
-
-    if (side === 3) {
-        x = 0;
-        y = Math.random() * canvas.height;
-    }
-
-    zombies.push({
-        x: x,
-        y: y,
-        size: 18,
-        speed: 0.7 + Math.random() * 0.8
-    });
-}
-
-
-function movePlayer(direction) {
-
-    if (!zombieRunning) return;
-
-    if (direction === "up")
-        player.y -= player.speed;
-
-    if (direction === "down")
-        player.y += player.speed;
-
-    if (direction === "left")
-        player.x -= player.speed;
-
-    if (direction === "right")
-        player.x += player.speed;
-
-    player.x =
-        Math.max(10, Math.min(canvas.width - 10, player.x));
-
-    player.y =
-        Math.max(10, Math.min(canvas.height - 10, player.y));
-}
-
-
-function shootZombie() {
-
-    if (!zombieRunning) return;
-
-    bullets.push({
-        x: player.x,
-        y: player.y,
-        speed: 8
-    });
-}
-
-
-function updateZombieGame() {
-
-    if (!zombieRunning) return;
-
-    /* Move zombies */
-
-    zombies.forEach(zombie => {
-
-        let dx = player.x - zombie.x;
-        let dy = player.y - zombie.y;
-
-        let distance =
-            Math.sqrt(dx * dx + dy * dy);
-
-        zombie.x +=
-            (dx / distance) * zombie.speed;
-
-        zombie.y +=
-            (dy / distance) * zombie.speed;
-
-        if (distance < 25) {
-
-            health -= 1;
-
-            document.getElementById("health")
-                .innerText = health;
-
-            if (health <= 0) {
-                endZombieGame();
-            }
-        }
-    });
-
-
-    /* Move bullets upward */
-
-    bullets.forEach(bullet => {
-        bullet.y -= bullet.speed;
-    });
-
-
-    /* Check bullets */
-
-    bullets.forEach((bullet, bulletIndex) => {
-
-        zombies.forEach((zombie, zombieIndex) => {
-
-            let dx = bullet.x - zombie.x;
-            let dy = bullet.y - zombie.y;
-
-            let distance =
-                Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 22) {
-
-                zombies.splice(zombieIndex, 1);
-                bullets.splice(bulletIndex, 1);
-
-                zombieScore++;
-
-                document.getElementById("zombieScore")
-                    .innerText = zombieScore;
-            }
-        });
-    });
-
-
-    /* Keep spawning zombies */
-
-    if (Math.random() < 0.025) {
-        createZombie();
-    }
-
-    drawZombieGame();
-}
-
-
-function drawZombieGame() {
-
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    /* Background */
-
-    ctx.fillStyle = "#151515";
-
-    ctx.fillRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-
-    /* Player */
-
-    ctx.fillStyle = "#ff0000";
-
-    ctx.beginPath();
-
-    ctx.arc(
-        player.x,
-        player.y,
-        player.size,
-        0,
-        Math.PI * 2
-    );
-
-    ctx.fill();
-
-
-    /* Zombies */
-
-    zombies.forEach(zombie => {
-
-        ctx.fillStyle = "#39ff14";
-
-        ctx.beginPath();
-
-        ctx.arc(
-            zombie.x,
-            zombie.y,
-            zombie.size,
-            0,
-            Math.PI * 2
+    zombieLoop =
+        setInterval(
+            updateZombieGame,
+            30
         );
 
-        ctx.fill();
+    for (
+        let i = 0;
+        i < 3;
+        i++
+    ) {
 
-        ctx.fillStyle = "#000";
-
-        ctx.fillRect(
-            zombie.x - 7,
-            zombie.y - 5,
-            4,
-            4
-        );
-
-        ctx.fillRect(
-            zombie.x + 3,
-            zombie.y - 5,
-            4,
-            4
-        );
-    });
-
-
-    /* Bullets */
-
-    bullets.forEach(bullet => {
-
-        ctx.fillStyle = "#fff";
-
-        ctx.beginPath();
-
-        ctx.arc(
-            bullet.x,
-            bullet.y,
-            4,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fill();
-    });
-}
-
-
-function endZombieGame() {
-
-    zombieRunning = false;
-
-    clearInterval(zombieLoop);
-
-    gameMessage.innerText =
-        "GAME OVER! You survived with " +
-        zombieScore +
-        " zombies defeated.";
+        spawnZombie();
+    }
 
     drawZombieGame();
 }
@@ -1101,48 +1234,1148 @@ function stopZombie() {
     zombieRunning = false;
 
     clearInterval(zombieLoop);
+
+    zombieLoop = null;
 }
 
 
-/* KEYBOARD CONTROLS */
+/* -------------------------
+   PLAYER MOVEMENT
+------------------------- */
 
-document.addEventListener("keydown", function(event) {
+function movePlayer(direction) {
 
-    if (document.getElementById("tetrisGame").style.display === "block") {
+    if (!zombieRunning) return;
 
-        if (event.key === "ArrowLeft")
-            moveTetris(-1);
+    if (direction === "up") {
 
-        if (event.key === "ArrowRight")
-            moveTetris(1);
+        player.y -= player.speed;
+    }
 
-        if (event.key === "ArrowDown")
-            dropTetris();
+    if (direction === "down") {
 
-        if (event.key === "ArrowUp")
-            rotateTetris();
+        player.y += player.speed;
+    }
+
+    if (direction === "left") {
+
+        player.x -= player.speed;
+    }
+
+    if (direction === "right") {
+
+        player.x += player.speed;
+    }
+
+    player.x =
+        Math.max(
+            30,
+            Math.min(
+                zCanvas.width - 30,
+                player.x
+            )
+        );
+
+    player.y =
+        Math.max(
+            40,
+            Math.min(
+                zCanvas.height - 40,
+                player.y
+            )
+        );
+}
+
+
+/* -------------------------
+   SHOOTING
+------------------------- */
+
+function shoot() {
+
+    if (!zombieRunning) return;
+
+    bullets.push({
+
+        x: player.x + 22,
+        y: player.y - 5,
+
+        speed: 10
+    });
+}
+
+
+/* -------------------------
+   BARRIER SYSTEM
+------------------------- */
+
+function buildBarrier() {
+
+    if (!zombieRunning) return;
+
+    /*
+       The barrier is placed at the
+       player's current position.
+
+       If the player has not moved,
+       pressing B again upgrades
+       the SAME barrier.
+    */
+
+    const gridSize = 40;
+
+    const x =
+        Math.round(player.x / gridSize)
+        * gridSize;
+
+    const y =
+        Math.round(player.y / gridSize)
+        * gridSize;
+
+
+    const existing =
+        barriers.find(
+            barrier =>
+                barrier.x === x &&
+                barrier.y === y
+        );
+
+
+    if (existing) {
+
+        if (existing.level < 5) {
+
+            existing.level++;
+
+        }
+
+    } else {
+
+        barriers.push({
+
+            x: x,
+            y: y,
+
+            level: 1,
+
+            maxHealth: 100,
+            health: 100
+        });
     }
 
 
-    if (zombieRunning) {
+    lastBarrierPosition = {
+        x: x,
+        y: y
+    };
 
-        if (event.key === "w" || event.key === "ArrowUp")
+    updateZombieInfo();
+}
+
+
+/* -------------------------
+   ZOMBIE SPAWN
+------------------------- */
+
+function spawnZombie() {
+
+    zombies.push({
+
+        x: zCanvas.width + 30,
+
+        y:
+            60 +
+            Math.random() *
+            (zCanvas.height - 120),
+
+        speed:
+            0.8 +
+            Math.random() * 0.7,
+
+        size: 20
+    });
+}
+
+
+/* -------------------------
+   DISTANCE
+------------------------- */
+
+function distance(
+    x1,
+    y1,
+    x2,
+    y2
+) {
+
+    const dx = x1 - x2;
+    const dy = y1 - y2;
+
+    return Math.sqrt(
+        dx * dx + dy * dy
+    );
+}
+
+
+/* -------------------------
+   GAME UPDATE
+------------------------- */
+
+function updateZombieGame() {
+
+    if (!zombieRunning) return;
+
+
+    /* Spawn zombies from right */
+
+    if (
+        Math.random() < 0.012 +
+        zombieScore * 0.0003
+    ) {
+
+        spawnZombie();
+    }
+
+
+    /* Move zombies */
+
+    zombies.forEach(
+        zombie => {
+
+            let targetX =
+                player.x;
+
+            let targetY =
+                player.y;
+
+
+            /*
+               Find nearest barrier
+               between zombie and player.
+            */
+
+            let nearestBarrier = null;
+
+            let nearestDistance = Infinity;
+
+            barriers.forEach(
+                barrier => {
+
+                    const d =
+                        distance(
+                            zombie.x,
+                            zombie.y,
+                            barrier.x,
+                            barrier.y
+                        );
+
+                    if (
+                        d < nearestDistance &&
+                        d < 180
+                    ) {
+
+                        nearestDistance = d;
+                        nearestBarrier =
+                            barrier;
+                    }
+                }
+            );
+
+
+            if (nearestBarrier) {
+
+                targetX =
+                    nearestBarrier.x;
+
+                targetY =
+                    nearestBarrier.y;
+            }
+
+
+            const dx =
+                targetX - zombie.x;
+
+            const dy =
+                targetY - zombie.y;
+
+            const d =
+                Math.sqrt(
+                    dx * dx + dy * dy
+                );
+
+
+            if (d > 2) {
+
+                zombie.x +=
+                    (dx / d) *
+                    zombie.speed;
+
+                zombie.y +=
+                    (dy / d) *
+                    zombie.speed;
+            }
+
+
+            /* Hit player */
+
+            if (
+                distance(
+                    zombie.x,
+                    zombie.y,
+                    player.x,
+                    player.y
+                ) < 30
+            ) {
+
+                health -= 0.25;
+            }
+
+
+            /* Hit barriers */
+
+            barriers.forEach(
+                barrier => {
+
+                    if (
+                        distance(
+                            zombie.x,
+                            zombie.y,
+                            barrier.x,
+                            barrier.y
+                        ) < 30
+                    ) {
+
+                        barrier.health -= 0.25;
+
+                        /*
+                           Push zombie back
+                           so it doesn't pass
+                           straight through.
+                        */
+
+                        zombie.x += 0.8;
+                    }
+                }
+            );
+        }
+    );
+
+
+    /* Remove destroyed barriers */
+
+    barriers =
+        barriers.filter(
+            barrier =>
+                barrier.health > 0
+        );
+
+
+    /* Move bullets */
+
+    bullets.forEach(
+        bullet => {
+
+            bullet.x += bullet.speed;
+        }
+    );
+
+
+    /* Bullet collision */
+
+    for (
+        let i = bullets.length - 1;
+        i >= 0;
+        i--
+    ) {
+
+        let hit = false;
+
+        for (
+            let j = zombies.length - 1;
+            j >= 0;
+            j--
+        ) {
+
+            if (
+                distance(
+                    bullets[i].x,
+                    bullets[i].y,
+                    zombies[j].x,
+                    zombies[j].y
+                ) < 25
+            ) {
+
+                zombies.splice(j, 1);
+
+                zombieScore++;
+
+                hit = true;
+
+                break;
+            }
+        }
+
+        if (hit) {
+
+            bullets.splice(i, 1);
+        }
+    }
+
+
+    /* Remove bullets outside screen */
+
+    bullets =
+        bullets.filter(
+            bullet =>
+                bullet.x <
+                zCanvas.width + 50
+        );
+
+
+    /* Game over */
+
+    if (health <= 0) {
+
+        health = 0;
+
+        zombieRunning = false;
+
+        clearInterval(zombieLoop);
+
+        gameMessage.innerText =
+            "GAME OVER! You defeated " +
+            zombieScore +
+            " zombies.";
+
+    }
+
+
+    updateZombieInfo();
+
+    drawZombieGame();
+}
+
+
+/* -------------------------
+   INFO
+------------------------- */
+
+function updateZombieInfo() {
+
+    document.getElementById(
+        "health"
+    ).innerText =
+        Math.ceil(health);
+
+    document.getElementById(
+        "zombieScore"
+    ).innerText =
+        zombieScore;
+
+    document.getElementById(
+        "barrierCount"
+    ).innerText =
+        barriers.length;
+}
+
+
+/* =====================================================
+   DRAW ZOMBIE GAME
+===================================================== */
+
+function drawZombieGame() {
+
+    const ctx = zCtx;
+
+    ctx.clearRect(
+        0,
+        0,
+        zCanvas.width,
+        zCanvas.height
+    );
+
+
+    /* -------------------------
+       GRASS
+    ------------------------- */
+
+    ctx.fillStyle = "#4d9b3a";
+
+    ctx.fillRect(
+        0,
+        0,
+        zCanvas.width,
+        zCanvas.height
+    );
+
+
+    /* Small grass details */
+
+    ctx.strokeStyle = "#39802d";
+
+    ctx.lineWidth = 2;
+
+    for (
+        let x = 0;
+        x < zCanvas.width;
+        x += 25
+    ) {
+
+        for (
+            let y = 20;
+            y < zCanvas.height;
+            y += 35
+        ) {
+
+            ctx.beginPath();
+
+            ctx.moveTo(x, y + 6);
+
+            ctx.lineTo(x + 3, y);
+
+            ctx.moveTo(x + 4, y + 6);
+
+            ctx.lineTo(x + 7, y + 1);
+
+            ctx.stroke();
+        }
+    }
+
+
+    /* -------------------------
+       BARRIERS
+    ------------------------- */
+
+    barriers.forEach(
+        barrier => {
+
+            const size = 34;
+
+            const left =
+                barrier.x - size / 2;
+
+            const top =
+                barrier.y - size / 2;
+
+
+            /* Stronger barriers become darker */
+
+            if (barrier.level === 1) {
+
+                ctx.fillStyle = "#777";
+            }
+
+            else if (barrier.level === 2) {
+
+                ctx.fillStyle = "#888";
+            }
+
+            else if (barrier.level === 3) {
+
+                ctx.fillStyle = "#aaa";
+            }
+
+            else {
+
+                ctx.fillStyle = "#ddd";
+            }
+
+
+            ctx.fillRect(
+                left,
+                top,
+                size,
+                size
+            );
+
+
+            ctx.strokeStyle = "#222";
+
+            ctx.lineWidth = 3;
+
+            ctx.strokeRect(
+                left,
+                top,
+                size,
+                size
+            );
+
+
+            /* Level */
+
+            ctx.fillStyle = "#111";
+
+            ctx.font =
+                "bold 13px Arial";
+
+            ctx.textAlign = "center";
+
+            ctx.fillText(
+                "LV " + barrier.level,
+                barrier.x,
+                barrier.y + 5
+            );
+
+
+            /* Health bar */
+
+            ctx.fillStyle = "#222";
+
+            ctx.fillRect(
+                left,
+                top - 8,
+                size,
+                5
+            );
+
+            ctx.fillStyle = "#00ff00";
+
+            ctx.fillRect(
+                left,
+                top - 8,
+                size *
+                (barrier.health /
+                barrier.maxHealth),
+                5
+            );
+        }
+    );
+
+
+    /* -------------------------
+       PLAYER
+       WHITE STICK FIGURE
+    ------------------------- */
+
+    if (player) {
+
+        drawPlayer(
+            ctx,
+            player.x,
+            player.y
+        );
+    }
+
+
+    /* -------------------------
+       ZOMBIES
+    ------------------------- */
+
+    zombies.forEach(
+        zombie => {
+
+            drawZombie(
+                ctx,
+                zombie.x,
+                zombie.y
+            );
+        }
+    );
+
+
+    /* -------------------------
+       BULLETS
+    ------------------------- */
+
+    bullets.forEach(
+        bullet => {
+
+            ctx.fillStyle = "#fff";
+
+            ctx.beginPath();
+
+            ctx.arc(
+                bullet.x,
+                bullet.y,
+                4,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+        }
+    );
+
+
+    /* -------------------------
+       RIGHT SIDE WARNING
+    ------------------------- */
+
+    ctx.fillStyle =
+        "rgba(255,0,0,0.15)";
+
+    ctx.fillRect(
+        zCanvas.width - 40,
+        0,
+        40,
+        zCanvas.height
+    );
+
+    ctx.fillStyle = "#fff";
+
+    ctx.font =
+        "bold 14px Arial";
+
+    ctx.textAlign = "center";
+
+    ctx.fillText(
+        "ZOMBIES",
+        zCanvas.width - 20,
+        25
+    );
+}
+
+
+/* =====================================================
+   DRAW WHITE PLAYER
+===================================================== */
+
+function drawPlayer(
+    ctx,
+    x,
+    y
+) {
+
+    ctx.strokeStyle = "#fff";
+
+    ctx.fillStyle = "#fff";
+
+    ctx.lineWidth = 5;
+
+    ctx.lineCap = "round";
+
+
+    /* Head */
+
+    ctx.beginPath();
+
+    ctx.arc(
+        x,
+        y - 32,
+        10,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.stroke();
+
+
+    /* Body */
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y - 22
+    );
+
+    ctx.lineTo(
+        x,
+        y + 15
+    );
+
+    ctx.stroke();
+
+
+    /* Back arm */
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y - 12
+    );
+
+    ctx.lineTo(
+        x - 18,
+        y
+    );
+
+    ctx.stroke();
+
+
+    /* Gun arm */
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y - 12
+    );
+
+    ctx.lineTo(
+        x + 18,
+        y - 5
+    );
+
+    ctx.stroke();
+
+
+    /* Gun */
+
+    ctx.strokeStyle = "#222";
+
+    ctx.lineWidth = 7;
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x + 13,
+        y - 7
+    );
+
+    ctx.lineTo(
+        x + 35,
+        y - 7
+    );
+
+    ctx.stroke();
+
+
+    /* Legs */
+
+    ctx.strokeStyle = "#fff";
+
+    ctx.lineWidth = 5;
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y + 15
+    );
+
+    ctx.lineTo(
+        x - 15,
+        y + 38
+    );
+
+    ctx.moveTo(
+        x,
+        y + 15
+    );
+
+    ctx.lineTo(
+        x + 15,
+        y + 38
+    );
+
+    ctx.stroke();
+}
+
+
+/* =====================================================
+   DRAW GREEN ZOMBIE
+===================================================== */
+
+function drawZombie(
+    ctx,
+    x,
+    y
+) {
+
+    ctx.strokeStyle = "#0a4";
+
+    ctx.fillStyle = "#20c940";
+
+    ctx.lineWidth = 5;
+
+    ctx.lineCap = "round";
+
+
+    /* Head */
+
+    ctx.beginPath();
+
+    ctx.arc(
+        x,
+        y - 32,
+        11,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.fill();
+
+    ctx.stroke();
+
+
+    /* Body */
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y - 21
+    );
+
+    ctx.lineTo(
+        x,
+        y + 15
+    );
+
+    ctx.stroke();
+
+
+    /*
+       Zombie arms pointing forward
+       toward the player.
+    */
+
+    ctx.strokeStyle = "#20c940";
+
+    ctx.lineWidth = 7;
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y - 12
+    );
+
+    ctx.lineTo(
+        x - 30,
+        y - 4
+    );
+
+    ctx.lineTo(
+        x - 45,
+        y + 2
+    );
+
+    ctx.moveTo(
+        x,
+        y - 12
+    );
+
+    ctx.lineTo(
+        x - 28,
+        y + 5
+    );
+
+    ctx.lineTo(
+        x - 43,
+        y + 12
+    );
+
+    ctx.stroke();
+
+
+    /* Legs */
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x,
+        y + 15
+    );
+
+    ctx.lineTo(
+        x - 14,
+        y + 38
+    );
+
+    ctx.moveTo(
+        x,
+        y + 15
+    );
+
+    ctx.lineTo(
+        x + 14,
+        y + 38
+    );
+
+    ctx.stroke();
+
+
+    /* Eyes */
+
+    ctx.fillStyle = "#111";
+
+    ctx.beginPath();
+
+    ctx.arc(
+        x - 4,
+        y - 34,
+        2,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.arc(
+        x + 4,
+        y - 34,
+        2,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.fill();
+}
+
+
+/* =====================================================
+   KEYBOARD CONTROLS
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        /* =================
+           TETRIS
+        ================= */
+
+        if (
+            document.getElementById(
+                "tetrisGame"
+            ).style.display === "block"
+        ) {
+
+            if (
+                event.key === "ArrowLeft"
+            ) {
+
+                event.preventDefault();
+
+                moveTetris(-1);
+
+                return;
+            }
+
+
+            if (
+                event.key === "ArrowRight"
+            ) {
+
+                event.preventDefault();
+
+                moveTetris(1);
+
+                return;
+            }
+
+
+            if (
+                event.key === "ArrowDown"
+            ) {
+
+                event.preventDefault();
+
+                dropTetris();
+
+                return;
+            }
+
+
+            if (
+                event.key === "ArrowUp"
+            ) {
+
+                event.preventDefault();
+
+                rotateTetris();
+
+                return;
+            }
+        }
+
+
+        /* =================
+           ZOMBIE GAME
+        ================= */
+
+        if (!zombieRunning) return;
+
+
+        const key =
+            event.key.toLowerCase();
+
+
+        /* Movement */
+
+        if (
+            key === "w" ||
+            event.key === "ArrowUp"
+        ) {
+
+            event.preventDefault();
+
             movePlayer("up");
 
-        if (event.key === "s" || event.key === "ArrowDown")
+            return;
+        }
+
+
+        if (
+            key === "s" ||
+            event.key === "ArrowDown"
+        ) {
+
+            event.preventDefault();
+
             movePlayer("down");
 
-        if (event.key === "a" || event.key === "ArrowLeft")
+            return;
+        }
+
+
+        if (
+            key === "a" ||
+            event.key === "ArrowLeft"
+        ) {
+
+            event.preventDefault();
+
             movePlayer("left");
 
-        if (event.key === "d" || event.key === "ArrowRight")
+            return;
+        }
+
+
+        if (
+            key === "d" ||
+            event.key === "ArrowRight"
+        ) {
+
+            event.preventDefault();
+
             movePlayer("right");
 
-        if (event.code === "Space")
-            shootZombie();
-    }
+            return;
+        }
 
-});
+
+        /*
+           B is ONLY for barriers.
+
+           Pressing B repeatedly without
+           moving upgrades the same barrier.
+        */
+
+        if (key === "b") {
+
+            event.preventDefault();
+
+            buildBarrier();
+
+            return;
+        }
+
+
+        /*
+           Any other key shoots.
+
+           Spacebar also shoots.
+
+           WASD, arrows and B do NOT shoot.
+        */
+
+        shoot();
+
+    }
+);
 
 </script>
 
