@@ -1,204 +1,1150 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Swanik | YouTuber</title>
+<title>Swanik | YouTuber & Games</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            background: #111;
-            color: white;
-            text-align: center;
-        }
+body {
+    background: #111;
+    color: white;
+    text-align: center;
+}
 
-        header {
-            background: linear-gradient(135deg, #ff0000, #800000);
-            padding: 60px 20px;
-        }
+header {
+    background: linear-gradient(135deg, #ff0000, #800000);
+    padding: 60px 20px;
+}
 
-        header h1 {
-            font-size: 60px;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
 
-        header p {
-            font-size: 22px;
-        }
+header p {
+    font-size: 22px;
+}
 
-        .profile {
-            padding: 50px 20px;
-        }
+.profile {
+    padding: 50px 20px;
+}
 
-        .profile img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid #ff0000;
-            object-fit: cover;
-        }
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #ff0000;
+    object-fit: cover;
+}
 
-        .profile h2 {
-            font-size: 40px;
-            margin-top: 20px;
-        }
+.profile h2 {
+    font-size: 40px;
+    margin-top: 20px;
+}
 
-        .profile p {
-            max-width: 700px;
-            margin: 15px auto;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #ccc;
-        }
+.profile p {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+}
 
-        .buttons {
-            margin-top: 30px;
-        }
+/* BUTTONS */
 
-        .buttons a {
-            display: inline-block;
-            background: #ff0000;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            margin: 10px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.buttons {
+    margin-top: 30px;
+}
 
-        .buttons a:hover {
-            background: white;
-            color: #ff0000;
-            transform: scale(1.05);
-        }
+.buttons a {
+    display: inline-block;
+    background: #ff0000;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .videos {
-            padding: 50px 20px;
-            background: #1c1c1c;
-        }
+.buttons a:hover {
+    background: white;
+    color: #ff0000;
+    transform: scale(1.05);
+}
 
-        .videos h2 {
-            font-size: 35px;
-            margin-bottom: 30px;
-        }
+/* CONTENT */
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.videos {
+    padding: 50px 20px;
+    background: #1c1c1c;
+}
 
-        .card {
-            background: #292929;
-            width: 280px;
-            padding: 25px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
+.videos h2,
+.games h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.card {
+    background: #292929;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
 
-        .card p {
-            color: #bbb;
-        }
+.card:hover {
+    transform: translateY(-10px);
+}
 
-        footer {
-            padding: 25px;
-            background: #000;
-            color: #aaa;
-        }
+.card h3 {
+    margin-bottom: 10px;
+}
 
-        footer span {
-            color: #ff0000;
-        }
-    </style>
+.card p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* GAMES */
+
+.games {
+    padding: 60px 20px;
+    background: #111;
+}
+
+.game-card {
+    background: #292929;
+    width: 300px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 2px solid #800000;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff0000;
+}
+
+.game-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #bbb;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.play-button {
+    border: none;
+    background: #ff0000;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background: white;
+    color: #ff0000;
+}
+
+/* GAME AREA */
+
+#gameArea {
+    display: none;
+    background: #080808;
+    padding: 40px 15px;
+    border-top: 3px solid #ff0000;
+}
+
+#gameArea h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#gameMessage {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* TETRIS */
+
+#tetrisBoard {
+    width: 240px;
+    height: 480px;
+    background: #050505;
+    border: 4px solid #ff0000;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.tetris-cell {
+    border: 1px solid #181818;
+}
+
+.tetris-filled {
+    background: #ff0000;
+}
+
+/* ZOMBIE GAME */
+
+#zombieCanvas {
+    background: #151515;
+    border: 4px solid #ff0000;
+    max-width: 100%;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+.controls button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: white;
+    color: #ff0000;
+}
+
+.backButton {
+    margin-top: 20px;
+    background: #333;
+    color: white;
+    border: 1px solid #ff0000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    background: #000;
+    color: #aaa;
+}
+
+footer span {
+    color: #ff0000;
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>SWANIK</h1>
-        <p>🎥 YouTuber | 🤖 ChatGPT Enthusiast | 🚀 Creator</p>
-    </header>
+<header>
+    <h1>SWANIK</h1>
+    <p>🎥 YouTuber | 🤖 ChatGPT Enthusiast | 🎮 Gamer | 🚀 Creator</p>
+</header>
 
-    <section class="profile">
+<section class="profile">
 
-        <!-- Replace this image with your own photo -->
-        <img src="profile.jpg" alt="Swanik">
+    <img src="profile.jpg" alt="Swanik">
 
-        <h2>Hi, I'm Swanik! 👋</h2>
+    <h2>Hi, I'm Swanik! 👋</h2>
+
+    <p>
+        Welcome to my website! I am Swanik, a YouTuber and creator.
+        I love technology, coding, AI, gaming and making fun content.
+    </p>
+
+    <div class="buttons">
+
+        <a href="https://www.youtube.com/@rajaswanikreddy07"
+           target="_blank">
+            ▶ Subscribe Me on YouTube
+        </a>
+
+        <a href="#videos">
+            🎬 My Videos
+        </a>
+
+        <a href="#games">
+            🎮 Play Games
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="videos" id="videos">
+
+    <h2>🎬 My Content</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🤖 ChatGPT</h3>
+            <p>
+                Exploring AI, ChatGPT and cool things you can do
+                with technology.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📹 Vlogging</h3>
+            <p>
+                Sharing fun vlogs, adventures and exciting experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Coding</h3>
+            <p>
+                Creating awesome projects with HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="games" id="games">
+
+    <h2>🎮 Play Games</h2>
+
+    <div class="cards">
+
+        <div class="game-card">
+
+            <div class="game-icon">🧱</div>
+
+            <h3>Tetris</h3>
+
+            <p>
+                Stack the blocks, clear the lines and try
+                to get the highest score!
+            </p>
+
+            <button class="play-button" onclick="startTetris()">
+                ▶ Play Tetris
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🧟</div>
+
+            <h3>Zombie Survival</h3>
+
+            <p>
+                Survive the zombie attack and defeat as many
+                zombies as you can!
+            </p>
+
+            <button class="play-button" onclick="startZombie()">
+                ▶ Play Zombie Survival
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GAME AREA -->
+
+<section id="gameArea">
+
+    <h2 id="gameTitle">🎮 Game</h2>
+
+    <p id="gameMessage"></p>
+
+    <!-- TETRIS -->
+
+    <div id="tetrisGame" style="display:none;">
+
+        <div id="tetrisScore">
+            Score: 0
+        </div>
+
+        <div id="tetrisBoard"></div>
+
+        <div class="controls">
+
+            <button onclick="moveTetris(-1)">
+                ◀
+            </button>
+
+            <button onclick="rotateTetris()">
+                🔄
+            </button>
+
+            <button onclick="moveTetris(1)">
+                ▶
+            </button>
+
+            <button onclick="dropTetris()">
+                ⬇
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ZOMBIE -->
+
+    <div id="zombieGame" style="display:none;">
 
         <p>
-            Welcome to my website! I am Swanik, a YouTuber and content creator.
-            I love creating interesting videos, exploring technology,
-            and having fun with AI and ChatGPT.
+            ❤️ Health:
+            <span id="health">100</span>
+            &nbsp;&nbsp;
+            🧟 Zombies:
+            <span id="zombieScore">0</span>
         </p>
 
-        <div class="buttons">
-            <a href="https://www.youtube.com/@rajaswanikreddy07" target="_blank">
-                ▶ Subscribe on YouTube
-            </a>
+        <canvas id="zombieCanvas"
+                width="600"
+                height="400">
+        </canvas>
 
-            <a href="#videos">
-                🎬 My Videos
-            </a>
-        </div>
+        <div class="controls">
 
-    </section>
+            <button onclick="shootZombie()">
+                🔫 Shoot
+            </button>
 
-    <section class="videos" id="videos">
+            <button onclick="movePlayer('up')">
+                ⬆
+            </button>
 
-        <h2>🎬 My Content</h2>
+            <button onclick="movePlayer('left')">
+                ⬅
+            </button>
 
-        <div class="cards">
+            <button onclick="movePlayer('down')">
+                ⬇
+            </button>
 
-            <div class="card">
-                <h3>🤖 ChatGPT</h3>
-                <p>
-                    Exploring AI, ChatGPT and cool things you can do with technology.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>📹 Vlogging</h3>
-                <p>
-                    Sharing fun vlogs, daily adventures, exciting experiences and memorable moments.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>💻 Coding</h3>
-                <p>
-                    Learning and creating awesome projects with HTML, CSS and JavaScript.
-                </p>
-            </div>
+            <button onclick="movePlayer('right')">
+                ➡
+            </button>
 
         </div>
 
-    </section>
+    </div>
 
-    <footer>
-        <p>Made with ❤️ by <span>Swanik</span></p>
-        <p>© 2026 Swanik. All rights reserved.</p>
-    </footer>
+    <br>
+
+    <button class="backButton" onclick="closeGame()">
+        ✖ Close Game
+    </button>
+
+</section>
+
+
+<footer>
+
+    <p>Made with ❤️ by <span>Swanik</span></p>
+
+    <p>© 2026 Swanik. All rights reserved.</p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   GAME SYSTEM
+========================= */
+
+const gameArea = document.getElementById("gameArea");
+const gameTitle = document.getElementById("gameTitle");
+const gameMessage = document.getElementById("gameMessage");
+
+function showGame() {
+    gameArea.style.display = "block";
+    gameArea.scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function closeGame() {
+    gameArea.style.display = "none";
+    stopZombie();
+}
+
+
+/* =========================
+   TETRIS
+========================= */
+
+const boardWidth = 10;
+const boardHeight = 20;
+
+let tetrisBoard = [];
+let currentPiece;
+let pieceX;
+let pieceY;
+let tetrisScore = 0;
+let tetrisTimer;
+
+const pieces = [
+
+    [
+        [1,1,1,1]
+    ],
+
+    [
+        [1,1],
+        [1,1]
+    ],
+
+    [
+        [0,1,0],
+        [1,1,1]
+    ],
+
+    [
+        [1,0,0],
+        [1,1,1]
+    ],
+
+    [
+        [0,0,1],
+        [1,1,1]
+    ]
+
+];
+
+
+function startTetris() {
+
+    showGame();
+
+    gameTitle.innerText = "🧱 Tetris";
+    gameMessage.innerText =
+        "Use the buttons to move and rotate your blocks.";
+
+    document.getElementById("tetrisGame").style.display = "block";
+    document.getElementById("zombieGame").style.display = "none";
+
+    tetrisScore = 0;
+
+    clearInterval(tetrisTimer);
+
+    createTetrisBoard();
+    newPiece();
+
+    tetrisTimer = setInterval(dropTetris, 600);
+}
+
+
+function createTetrisBoard() {
+
+    tetrisBoard = [];
+
+    for (let y = 0; y < boardHeight; y++) {
+
+        tetrisBoard[y] = [];
+
+        for (let x = 0; x < boardWidth; x++) {
+            tetrisBoard[y][x] = 0;
+        }
+    }
+
+    drawTetris();
+}
+
+
+function newPiece() {
+
+    currentPiece =
+        pieces[Math.floor(Math.random() * pieces.length)];
+
+    currentPiece =
+        currentPiece.map(row => [...row]);
+
+    pieceX = 3;
+    pieceY = 0;
+
+    if (collision()) {
+        createTetrisBoard();
+        tetrisScore = 0;
+    }
+}
+
+
+function collision() {
+
+    for (let y = 0; y < currentPiece.length; y++) {
+
+        for (let x = 0; x < currentPiece[y].length; x++) {
+
+            if (!currentPiece[y][x]) continue;
+
+            let nx = pieceX + x;
+            let ny = pieceY + y;
+
+            if (
+                nx < 0 ||
+                nx >= boardWidth ||
+                ny >= boardHeight ||
+                (ny >= 0 && tetrisBoard[ny][nx])
+            ) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+
+function mergePiece() {
+
+    for (let y = 0; y < currentPiece.length; y++) {
+
+        for (let x = 0; x < currentPiece[y].length; x++) {
+
+            if (currentPiece[y][x]) {
+
+                let ny = pieceY + y;
+                let nx = pieceX + x;
+
+                if (ny >= 0) {
+                    tetrisBoard[ny][nx] = 1;
+                }
+            }
+        }
+    }
+}
+
+
+function clearLines() {
+
+    for (let y = boardHeight - 1; y >= 0; y--) {
+
+        if (tetrisBoard[y].every(cell => cell === 1)) {
+
+            tetrisBoard.splice(y, 1);
+
+            tetrisBoard.unshift(
+                new Array(boardWidth).fill(0)
+            );
+
+            tetrisScore += 100;
+
+            y++;
+        }
+    }
+
+    document.getElementById("tetrisScore").innerText =
+        "Score: " + tetrisScore;
+}
+
+
+function dropTetris() {
+
+    pieceY++;
+
+    if (collision()) {
+
+        pieceY--;
+
+        mergePiece();
+        clearLines();
+        newPiece();
+    }
+
+    drawTetris();
+}
+
+
+function moveTetris(direction) {
+
+    pieceX += direction;
+
+    if (collision()) {
+        pieceX -= direction;
+    }
+
+    drawTetris();
+}
+
+
+function rotateTetris() {
+
+    const oldPiece = currentPiece;
+
+    currentPiece =
+        currentPiece[0].map((_, index) =>
+            currentPiece.map(row => row[index]).reverse()
+        );
+
+    if (collision()) {
+        currentPiece = oldPiece;
+    }
+
+    drawTetris();
+}
+
+
+function drawTetris() {
+
+    const board = document.getElementById("tetrisBoard");
+
+    board.innerHTML = "";
+
+    for (let y = 0; y < boardHeight; y++) {
+
+        for (let x = 0; x < boardWidth; x++) {
+
+            const cell = document.createElement("div");
+
+            cell.className = "tetris-cell";
+
+            if (tetrisBoard[y][x]) {
+                cell.classList.add("tetris-filled");
+            }
+
+            board.appendChild(cell);
+        }
+    }
+
+    for (let y = 0; y < currentPiece.length; y++) {
+
+        for (let x = 0; x < currentPiece[y].length; x++) {
+
+            if (currentPiece[y][x]) {
+
+                let nx = pieceX + x;
+                let ny = pieceY + y;
+
+                if (
+                    nx >= 0 &&
+                    nx < boardWidth &&
+                    ny >= 0 &&
+                    ny < boardHeight
+                ) {
+
+                    const index =
+                        ny * boardWidth + nx;
+
+                    board.children[index]
+                        .classList.add("tetris-filled");
+                }
+            }
+        }
+    }
+}
+
+
+/* =========================
+   ZOMBIE SURVIVAL
+========================= */
+
+const canvas =
+    document.getElementById("zombieCanvas");
+
+const ctx = canvas.getContext("2d");
+
+let player;
+let zombies = [];
+let bullets = [];
+let zombieScore = 0;
+let health = 100;
+let zombieLoop;
+let zombieRunning = false;
+
+
+function startZombie() {
+
+    showGame();
+
+    gameTitle.innerText = "🧟 Zombie Survival";
+
+    gameMessage.innerText =
+        "Move around, shoot zombies and survive!";
+
+    document.getElementById("tetrisGame").style.display = "none";
+    document.getElementById("zombieGame").style.display = "block";
+
+    player = {
+        x: 300,
+        y: 200,
+        size: 18,
+        speed: 15
+    };
+
+    zombies = [];
+    bullets = [];
+
+    zombieScore = 0;
+    health = 100;
+
+    document.getElementById("health").innerText = health;
+    document.getElementById("zombieScore").innerText = zombieScore;
+
+    clearInterval(zombieLoop);
+
+    zombieRunning = true;
+
+    zombieLoop = setInterval(updateZombieGame, 40);
+
+    for (let i = 0; i < 4; i++) {
+        createZombie();
+    }
+
+    drawZombieGame();
+}
+
+
+function createZombie() {
+
+    let side =
+        Math.floor(Math.random() * 4);
+
+    let x;
+    let y;
+
+    if (side === 0) {
+        x = Math.random() * canvas.width;
+        y = 0;
+    }
+
+    if (side === 1) {
+        x = canvas.width;
+        y = Math.random() * canvas.height;
+    }
+
+    if (side === 2) {
+        x = Math.random() * canvas.width;
+        y = canvas.height;
+    }
+
+    if (side === 3) {
+        x = 0;
+        y = Math.random() * canvas.height;
+    }
+
+    zombies.push({
+        x: x,
+        y: y,
+        size: 18,
+        speed: 0.7 + Math.random() * 0.8
+    });
+}
+
+
+function movePlayer(direction) {
+
+    if (!zombieRunning) return;
+
+    if (direction === "up")
+        player.y -= player.speed;
+
+    if (direction === "down")
+        player.y += player.speed;
+
+    if (direction === "left")
+        player.x -= player.speed;
+
+    if (direction === "right")
+        player.x += player.speed;
+
+    player.x =
+        Math.max(10, Math.min(canvas.width - 10, player.x));
+
+    player.y =
+        Math.max(10, Math.min(canvas.height - 10, player.y));
+}
+
+
+function shootZombie() {
+
+    if (!zombieRunning) return;
+
+    bullets.push({
+        x: player.x,
+        y: player.y,
+        speed: 8
+    });
+}
+
+
+function updateZombieGame() {
+
+    if (!zombieRunning) return;
+
+    /* Move zombies */
+
+    zombies.forEach(zombie => {
+
+        let dx = player.x - zombie.x;
+        let dy = player.y - zombie.y;
+
+        let distance =
+            Math.sqrt(dx * dx + dy * dy);
+
+        zombie.x +=
+            (dx / distance) * zombie.speed;
+
+        zombie.y +=
+            (dy / distance) * zombie.speed;
+
+        if (distance < 25) {
+
+            health -= 1;
+
+            document.getElementById("health")
+                .innerText = health;
+
+            if (health <= 0) {
+                endZombieGame();
+            }
+        }
+    });
+
+
+    /* Move bullets upward */
+
+    bullets.forEach(bullet => {
+        bullet.y -= bullet.speed;
+    });
+
+
+    /* Check bullets */
+
+    bullets.forEach((bullet, bulletIndex) => {
+
+        zombies.forEach((zombie, zombieIndex) => {
+
+            let dx = bullet.x - zombie.x;
+            let dy = bullet.y - zombie.y;
+
+            let distance =
+                Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 22) {
+
+                zombies.splice(zombieIndex, 1);
+                bullets.splice(bulletIndex, 1);
+
+                zombieScore++;
+
+                document.getElementById("zombieScore")
+                    .innerText = zombieScore;
+            }
+        });
+    });
+
+
+    /* Keep spawning zombies */
+
+    if (Math.random() < 0.025) {
+        createZombie();
+    }
+
+    drawZombieGame();
+}
+
+
+function drawZombieGame() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    /* Background */
+
+    ctx.fillStyle = "#151515";
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    /* Player */
+
+    ctx.fillStyle = "#ff0000";
+
+    ctx.beginPath();
+
+    ctx.arc(
+        player.x,
+        player.y,
+        player.size,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.fill();
+
+
+    /* Zombies */
+
+    zombies.forEach(zombie => {
+
+        ctx.fillStyle = "#39ff14";
+
+        ctx.beginPath();
+
+        ctx.arc(
+            zombie.x,
+            zombie.y,
+            zombie.size,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+        ctx.fillStyle = "#000";
+
+        ctx.fillRect(
+            zombie.x - 7,
+            zombie.y - 5,
+            4,
+            4
+        );
+
+        ctx.fillRect(
+            zombie.x + 3,
+            zombie.y - 5,
+            4,
+            4
+        );
+    });
+
+
+    /* Bullets */
+
+    bullets.forEach(bullet => {
+
+        ctx.fillStyle = "#fff";
+
+        ctx.beginPath();
+
+        ctx.arc(
+            bullet.x,
+            bullet.y,
+            4,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+    });
+}
+
+
+function endZombieGame() {
+
+    zombieRunning = false;
+
+    clearInterval(zombieLoop);
+
+    gameMessage.innerText =
+        "GAME OVER! You survived with " +
+        zombieScore +
+        " zombies defeated.";
+
+    drawZombieGame();
+}
+
+
+function stopZombie() {
+
+    zombieRunning = false;
+
+    clearInterval(zombieLoop);
+}
+
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener("keydown", function(event) {
+
+    if (document.getElementById("tetrisGame").style.display === "block") {
+
+        if (event.key === "ArrowLeft")
+            moveTetris(-1);
+
+        if (event.key === "ArrowRight")
+            moveTetris(1);
+
+        if (event.key === "ArrowDown")
+            dropTetris();
+
+        if (event.key === "ArrowUp")
+            rotateTetris();
+    }
+
+
+    if (zombieRunning) {
+
+        if (event.key === "w" || event.key === "ArrowUp")
+            movePlayer("up");
+
+        if (event.key === "s" || event.key === "ArrowDown")
+            movePlayer("down");
+
+        if (event.key === "a" || event.key === "ArrowLeft")
+            movePlayer("left");
+
+        if (event.key === "d" || event.key === "ArrowRight")
+            movePlayer("right");
+
+        if (event.code === "Space")
+            shootZombie();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
-```
